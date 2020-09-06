@@ -9,9 +9,10 @@ import SwiftUI
 
 struct TimeLineBranchView: View {
     var number_offset:CGFloat
+    var date:String
     var body: some View {
         VStack{
-            Text("1")
+            Text(date)
                 .foregroundColor(Color(hex:"bd997b"))
                 .fontWeight(.bold)
                 .font(.system(.largeTitle,design:.rounded))
@@ -38,7 +39,7 @@ struct TimeLineBranchView: View {
 
 struct TimeLineBranchView_Previews: PreviewProvider {
     static var previews: some View {
-        TimeLineBranchView(number_offset: 15).previewLayout(.sizeThatFits)
+        TimeLineBranchView(number_offset: 15,date: "1").previewLayout(.sizeThatFits)
     }
 }
 

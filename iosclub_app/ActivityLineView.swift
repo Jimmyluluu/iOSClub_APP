@@ -52,7 +52,7 @@ struct ActivityLineView: View {
                         .lineLimit(1)
                 }
             }
-            .frame(width: 350)
+//            .frame(width: 350)
 
         }
 }

@@ -20,7 +20,7 @@ struct tableView: View {
                 Image("about")
                 Text("關於社團")
             }.tag(0)
-            Text("123")
+            TimeLineView()
             .background(Color(hex:"0A0A0A"))
             .tabItem{
                 Image("activity")
