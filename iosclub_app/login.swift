@@ -15,7 +15,7 @@ struct login: View {
     var body: some View {
         ZStack{
             ZStack{
-                Color(hex:0x0A0A0A)
+                Color(hex:"0A0A0A")
                 Image("LOG_IN")
                     .offset(x:0,y: -230)
             }

@@ -10,36 +10,36 @@ import SwiftUI
 
 struct tableView: View {
     init() {
-        UITabBar.appearance().barTintColor = Color(hex: 0x0A0A0A).toUIColor()
+        UITabBar.appearance().barTintColor = Color(hex: "0A0A0A").toUIColor()
     }
     var body: some View {
         TabView{
             Text("g")
-            .background(Color(hex:0x0A0A0A))
+            .background(Color(hex:"0A0A0A"))
             .tabItem{
                 Image("about")
                 Text("關於社團")
             }.tag(0)
             Text("123")
-            .background(Color(hex:0x0A0A0A))
+            .background(Color(hex:"0A0A0A"))
             .tabItem{
                 Image("activity")
                 Text("活動")
             }.tag(1)
             Text("a11")
-            .background(Color(hex:0x0A0A0A))
+            .background(Color(hex:"0A0A0A"))
             .tabItem{
                 Image("mind")
                 Text("個人")
             }.tag(2)
             Text("a11")
-            .background(Color(hex:0x0A0A0A))
+            .background(Color(hex:"0A0A0A"))
             .tabItem{
                 Image("class")
                 Text("課程")
             }.tag(3)
             Text("a11")
-            .background(Color(hex:0x0A0A0A))
+            .background(Color(hex:"0A0A0A"))
             .tabItem{
                 Image("setting")
                 Text("帳號設定")
