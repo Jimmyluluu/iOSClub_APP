@@ -10,51 +10,49 @@ import SwiftUI
 
 struct ActivityLineView: View {
     var title:String!
-        var important:Bool!
-    //    var image:Image!
-        var body: some View {
-            Button(action: {
-                print("Hello button tapped!")
-            }) {
-                if(important){
-                    Text(title)
-                        .fontWeight(.bold)
-                        .font(.system(.footnote,design:.rounded))
-                        .frame(minWidth: 0, maxWidth: UIScreen.screenWidth/3)
-                        .padding(10)
-    //                    .padding(.leading)
-    //                    .padding(.horizontal)
-                        .foregroundColor(Color(.white))
-                        .background(Color(hex:"ff8112"))
-                        .cornerRadius(60)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 60)
-                                .stroke(Color(hex:"bd997b"), lineWidth: 5)
-                        )
-                        .lineLimit(1)
-                        
-                        
-                }else{
-                    Text(title)
-                        .fontWeight(.bold)
-                        .font(.system(.footnote,design:.rounded))
-                        .frame(minWidth: 0, maxWidth: UIScreen.screenWidth/3)
-                        .padding(10)
-    //                    .padding(.leading)
-    //                    .padding(.horizontal)
-                        .foregroundColor(Color(.white))
-    //                    .background(Color(hex: 0xff8112))
-                        .cornerRadius(60)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 60)
-                                .stroke(Color(hex: "bd997b"), lineWidth: 5)
-                        )
-                        .lineLimit(1)
-                }
+    var important:Bool!
+    var body: some View {
+        Button(action: {
+            print("Hello button tapped!")
+        }) {
+            if(important){
+                Text(title)
+                    .fontWeight(.bold)
+                    .font(.system(.footnote,design:.rounded))
+                    .frame(minWidth: 0, maxWidth: UIScreen.screenWidth/3)
+                    .padding(10)
+//                    .padding(.leading)
+//                    .padding(.horizontal)
+                    .foregroundColor(Color(.white))
+                    .background(Color(hex:"ff8112"))
+                    .cornerRadius(60)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 60)
+                            .stroke(Color(hex:"bd997b"), lineWidth: 5)
+                    )
+                    .lineLimit(1)
+                    
+                    
+            }else{
+                Text(title)
+                    .fontWeight(.bold)
+                    .font(.system(.footnote,design:.rounded))
+                    .frame(minWidth: 0, maxWidth: UIScreen.screenWidth/3)
+                    .padding(10)
+//                    .padding(.leading)
+//                    .padding(.horizontal)
+                    .foregroundColor(Color(.white))
+//                    .background(Color(hex: 0xff8112))
+                    .cornerRadius(60)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 60)
+                            .stroke(Color(hex: "bd997b"), lineWidth: 5)
+                    )
+                    .lineLimit(1)
             }
-            .frame(width: 350)
-
         }
+
+    }
 }
 
 struct ActivityLineView_Previews: PreviewProvider {
