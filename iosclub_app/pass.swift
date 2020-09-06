@@ -9,9 +9,21 @@
 import SwiftUI
 
 struct pass: View {
+    @State private var name = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image("水瓶")
+                .resizable()
+                .scaledToFill()
+                .frame(width: 300, height: 300)
+                .clipShape(Circle())
+            TextField("Username", text: $name)                   .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(width: 200)
+                .foregroundColor(Color.yellow)
+        }
+        
     }
+    
 }
 
 struct pass_Previews: PreviewProvider {

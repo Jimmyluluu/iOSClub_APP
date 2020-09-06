@@ -9,13 +9,22 @@
 import SwiftUI
 
 struct TableViewButton: View {
+    var pictureName :String
+    var picture :String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Color(hex:0x0A0A0A)
+            Image(picture)
+            Text(pictureName)
+                .font(.subheadline)
+            
+        }
     }
 }
 
 struct TableViewButton_Previews: PreviewProvider {
     static var previews: some View {
-        TableViewButton()
+        TableViewButton(pictureName: "課程", picture: "class").previewLayout(.sizeThatFits)
     }
 }

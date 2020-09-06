@@ -7,11 +7,31 @@
 //
 
 import SwiftUI
-
-struct test: View {
+struct SuperTextField: View {
+    
+    var placeholder: Text
+    @Binding var text: String
+    var editingChanged: (Bool)->() = { _ in }
+    var commit: ()->() = { }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack(alignment: .leading) {
+            if text.isEmpty { placeholder }
+            TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
+        }
     }
+    
+}
+struct test: View {
+    @State var text: String = "TextField Text"
+     
+     var body: some View {
+         SuperTextField(
+             placeholder: Text("Placeholder Text").foregroundColor(.red),
+             text: $text
+         )
+     }
+
 }
 
 struct test_Previews: PreviewProvider {
