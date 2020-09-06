@@ -29,18 +29,19 @@ struct TimeLineView:View {
                 .offset(x:-30,y:-UIScreen.screenHeight/2*0.7)
             HStack{
                 VStack{
+                    //放在這裡
                     HStack{
                         ActivityLineView(title: "迎新茶會",important: true)
-    //                        .frame(width: 100, height: 50)
-                        TimeLineBranchView(number_offset: -15, date: "2")
+                        TimeLineBranchView(is_school:false, date: "2")
                             .offset(x:15,y:-20)
                     }.padding(.leading)
+                    //這是一個
                     HStack{
-                        ActivityLineView(title: "iOSClub夜烤",important: false)
-    //                        .frame(width: 100, height: 50)
-                        TimeLineBranchView(number_offset: -15, date: "15")
+                        ActivityLineView(title: "中秋夜烤",important: false)
+                        TimeLineBranchView(is_school:false, date: "15")
                             .offset(x:15,y:-20)
                     }.padding(.leading)
+                    //這是兩個
                     
                 }
                 Capsule()
@@ -50,26 +51,23 @@ struct TimeLineView:View {
                 
                 VStack {
                     HStack{
-                        TimeLineBranchView(number_offset: 10, date: "1")
+                        TimeLineBranchView(is_school:true, date: "1")
                             .offset(x:-15,y:-20)
                         ActivityLineView(title: "迎新茶會",important: false)
-    //                    .frame(width: 100, height: 50)
                     }.padding(.trailing)
                     
                     HStack{
-                        TimeLineBranchView(number_offset: 10, date: "3")
+                        TimeLineBranchView(is_school:true, date: "3")
                             .offset(x:-15,y:-20)
                         ActivityLineView(title: "迎新茶會",important: true)
-    //                    .frame(width: 100, height: 50)
                     }
                     .padding(.trailing)
                     .hidden()
                     
                     HStack{
-                        TimeLineBranchView(number_offset: 10, date: "30")
+                        TimeLineBranchView(is_school:true, date: "30")
                             .offset(x:-15,y:-20)
                         ActivityLineView(title: "迎新茶會",important: true)
-    //                    .frame(width: 100, height: 50)
                     }.padding(.trailing)
                 }
             }
