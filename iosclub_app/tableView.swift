@@ -26,7 +26,7 @@ struct tableView: View {
                 Image("activity")
                 Text("活動")
             }.tag(1)
-            Text("a11")
+            MineView2()
             .background(Color(hex:"0A0A0A"))
             .tabItem{
                 Image("mind")
