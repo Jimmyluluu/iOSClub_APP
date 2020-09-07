@@ -13,19 +13,11 @@ struct TimeLineBranchView: View {
     var date:String
     var body: some View {
         VStack{
-            if is_school{
-                Text(date)
-                    .foregroundColor(Color(hex:"bd997b"))
-                    .fontWeight(.bold)
-                    .font(.system(.largeTitle,design:.rounded))
-                    .offset(x:15,y:10)
-            }else{
-                Text(date)
-                    .foregroundColor(Color(hex:"bd997b"))
-                    .fontWeight(.bold)
-                    .font(.system(.largeTitle,design:.rounded))
-                    .offset(x:-15,y:10)
-            }
+            Text(date)
+                .foregroundColor(Color(hex:"bd997b"))
+                .fontWeight(.bold)
+                .font(.system(.largeTitle,design:.rounded))
+                .offset(x:is_school ? 15 : -15,y:10)
             Capsule()
                 .fill(Color(hex:"bd997b"))
                 .frame(width: 60, height: 10)

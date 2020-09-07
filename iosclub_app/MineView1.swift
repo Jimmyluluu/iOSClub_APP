@@ -12,31 +12,26 @@ struct MineView1: View {
      var body: some View {
         ZStack{
             Color(hex:"0A0A0A")
-        VStack(spacing:38){
-            Image("border")
+            VStack(spacing:38){
+                Image("border")
                 Button(action:{
-                    }){
+                    print("123")
+                }){
                     VStack{
                         Image("card")
-                        Text("打卡系統")
-                        .foregroundColor(Color.white)
+                        Text("打卡系統").foregroundColor(Color.white)
                     }
-                }
-                    .buttonStyle(PlainButtonStyle())
+                }.buttonStyle(PlainButtonStyle())
                 Button(action:{
                     print("1234")
-                    }){
+                }){
                     VStack{
                         Image("leave")
-                        Text("我要請假")
-                        .foregroundColor(Color.white)
+                        Text("我要請假").foregroundColor(Color.white)
                     }
-                }
-                    .buttonStyle(PlainButtonStyle())
-            }
-        .offset(x :0,y: -90)
-        }
-        .edgesIgnoringSafeArea(.all)
+                }.buttonStyle(PlainButtonStyle())
+            }.offset(x :0,y: -90)
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 

@@ -11,45 +11,24 @@ import SwiftUI
 struct ActivityLineView: View {
     var title:String!
     var important:Bool!
+//    let color = important! ? Color(hex: "ff812") : Color(.white).opacity(0)
     var body: some View {
         Button(action: {
             print("Hello button tapped!")
         }) {
-            if(important){
-                Text(title)
-                    .fontWeight(.bold)
-                    .font(.system(.footnote,design:.rounded))
-                    .frame(minWidth: 0, maxWidth: UIScreen.screenWidth/3)
-                    .padding(10)
-//                    .padding(.leading)
-//                    .padding(.horizontal)
-                    .foregroundColor(Color(.white))
-                    .background(Color(hex:"ff8112"))
-                    .cornerRadius(60)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 60)
-                            .stroke(Color(hex:"bd997b"), lineWidth: 5)
-                    )
-                    .lineLimit(1)
-                    
-                    
-            }else{
-                Text(title)
-                    .fontWeight(.bold)
-                    .font(.system(.footnote,design:.rounded))
-                    .frame(minWidth: 0, maxWidth: UIScreen.screenWidth/3)
-                    .padding(10)
-//                    .padding(.leading)
-//                    .padding(.horizontal)
-                    .foregroundColor(Color(.white))
-//                    .background(Color(hex: 0xff8112))
-                    .cornerRadius(60)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 60)
-                            .stroke(Color(hex: "bd997b"), lineWidth: 5)
-                    )
-                    .lineLimit(1)
-            }
+            Text(title)
+                .fontWeight(.bold)
+                .font(.system(.footnote,design:.rounded))
+                .frame(minWidth: 0, maxWidth: UIScreen.screenWidth/3)
+                .padding(10)
+                .foregroundColor(Color(.white))
+                .background(important ? Color(hex:"7fff8112"):Color(.white).opacity(0))
+                .cornerRadius(60)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 60)
+                        .stroke(Color(hex:"bd997b"), lineWidth: 5)
+                )
+                .lineLimit(1)
         }
 
     }

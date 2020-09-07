@@ -9,22 +9,19 @@
 import SwiftUI
 
 struct loginView: View {
-    @State private var name = ""
     var icon:String!
     var body: some View {
-    ZStack{
-        //Color(hex:0x0A0A0A)
-        Image(icon)
-            .offset(x:-50, y:0)
-        Image("Line")
-            .offset(x:28, y: 20)
+        VStack{
+            Image(icon)
+                .offset(x:-80)
+            Image("Line")
         }
-        //.edgesIgnoringSafeArea(.all)
     }
 }
 struct loginView_Previews: PreviewProvider {
     static var previews: some View {
         loginView(icon: "person")
+//            .background(Color.black)
     }
 }
 
