@@ -14,9 +14,7 @@ struct ContentView: View {
         Group{
             if self.signInSuccess //當是true的時候進開始頁相反進登入
             {
-//                ClassView()//放登入成功頁
-                tableView()
-//                PaginatedView(pages: [Page(index: 0),Page(index: 1)], spacing: CGFloat(100))
+                tableView()//放登入成功頁
             }
             else
             {

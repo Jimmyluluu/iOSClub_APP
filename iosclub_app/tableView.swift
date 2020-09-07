@@ -32,7 +32,7 @@ struct tableView: View {
                 Image("mind")
                 Text("個人")
             }.tag(2)
-            Text("a11")
+            ClassView()
             .background(Color(hex:"0A0A0A"))
             .tabItem{
                 Image("class")
