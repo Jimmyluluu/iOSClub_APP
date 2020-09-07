@@ -9,8 +9,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var signInSuccess = false//判斷是否登入ㄉ
     var body: some View {
-        login()
+        Group{
+            if self.signInSuccess //當是true的時候進開始頁相反進登入
+            {
+                ClassView()//放登入成功頁
+            }
+            else
+            {
+                login(
+                signInSuccess: self.$signInSuccess)
+                //把是否登入開關傳入
+            }
+        }
     }
 }
 

@@ -11,7 +11,7 @@ import SwiftUI
 struct login: View {
     @State private var username = ""
     @State private var password = ""
-    
+    @Binding var signInSuccess:Bool
     var body: some View {
         ZStack{
             Color(hex:"0A0A0A")
@@ -57,7 +57,8 @@ struct login: View {
             
                 VStack(spacing:70){
                     Button(action: {
-                        print("123")
+                        self.signInSuccess=true
+                        //訪客登入
                     }){
                         Image("Group")
                     }
@@ -105,8 +106,4 @@ struct CustomTextField: View {
     }
 }
 
-struct login_Previews: PreviewProvider {
-    static var previews: some View {
-        login()
-    }
-}
+
