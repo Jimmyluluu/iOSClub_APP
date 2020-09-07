@@ -14,9 +14,9 @@ struct borderView: View {
     var head:String
     var body: some View {
         ZStack{
-            Image(is_manager ? "border_m" : "border")
+            Image(is_manager ? "border_m" : "border").renderingMode(.original)
             HStack(spacing:20){
-                Image(head)
+                Image(head).renderingMode(.original)
                 VStack{
                     Text(name)
                         .foregroundColor(.white)

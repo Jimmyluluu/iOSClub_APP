@@ -14,12 +14,12 @@ struct tableView: View {
     }
     var body: some View {
         TabView{
-            Text("g")
-                .background(Color(hex:"0A0A0A"))
-                .tabItem{
-                    Image("about")
-                    Text("關於社團")
-                }.tag(0)
+            AboutClubView()
+            .background(Color(hex:"0A0A0A"))
+            .tabItem{
+                Image("about")
+                Text("關於社團")
+            }.tag(0)
             TimeLineView()
                 .background(Color(hex:"0A0A0A"))
                 .tabItem{
@@ -33,17 +33,17 @@ struct tableView: View {
                     Text("個人")
                 }.tag(2)
             ClassView()
-                .background(Color(hex:"0A0A0A"))
-                .tabItem{
-                    Image("class")
-                    Text("課程")
-                }.tag(3)
-            Text("a11")
-                .background(Color(hex:"0A0A0A"))
-                .tabItem{
-                    Image("setting")
-                    Text("帳號設定")
-                }.tag(4)
+            .background(Color(hex:"0A0A0A"))
+            .tabItem{
+                Image("class")
+                Text("課程")
+            }.tag(3)
+            SettingView()
+            .background(Color(hex:"0A0A0A"))
+            .tabItem{
+                Image("setting")
+                Text("帳號設定")
+            }.tag(4)
         }
     }
 }

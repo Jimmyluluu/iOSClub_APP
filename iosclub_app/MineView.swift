@@ -15,9 +15,12 @@ struct MineView: View {
             ZStack{
                 Color(hex:"0A0A0A")
                 VStack(spacing:38){
-                    borderView(name: "薛竣祐", is_manager: is_manager, head: "card")
-                    
                     NavigationLink(destination:CheckInView(name: "薛竣祐", is_manager: is_manager)){
+                        
+                    borderView(name: "薛竣祐", is_manager: is_manager, head: "card")
+                    }
+                    
+                    NavigationLink(destination:CheckInView1()){
                         VStack{
                             Image("card").renderingMode(.original)
                             Text("打卡系統").foregroundColor(Color.white)
