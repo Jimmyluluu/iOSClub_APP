@@ -27,7 +27,7 @@ struct login: View {
                         loginView(icon: "person")
                         
                         CustomTextField(
-                            placeholder: Text("Username").foregroundColor(.white),
+                            placeholder: Text("Username").foregroundColor(.gray),
                             text: $username
                         )
                         .foregroundColor(.white)
@@ -39,7 +39,7 @@ struct login: View {
                     ZStack{
                         loginView(icon: "lock")
                         CustomTextField(
-                            placeholder: Text("Password").foregroundColor(.white),
+                            placeholder: Text("Password").foregroundColor(.gray),
                             text: $password
                         )
                         .foregroundColor(.white)

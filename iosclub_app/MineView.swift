@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct MineView: View {
-    @State var is_manager:Bool = false
+    var is_manager:Bool = true
     var body: some View {
         ZStack{
             Color(hex:"0A0A0A")
