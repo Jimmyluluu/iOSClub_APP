@@ -20,6 +20,7 @@
 		729F5CEE2504B18F00C4A8BC /* MineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F5CED2504B18F00C4A8BC /* MineView.swift */; };
 		729F5CF22504B23D00C4A8BC /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F5CF12504B23D00C4A8BC /* ClassView.swift */; };
 		729F5CF42505FE1600C4A8BC /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F5CF32505FE1600C4A8BC /* CheckInView.swift */; };
+		729F5CF625062DF800C4A8BC /* ClassContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F5CF525062DF800C4A8BC /* ClassContentView.swift */; };
 		72A9FF532504A2E40016E388 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A9FF522504A2E40016E388 /* Extensions.swift */; };
 		72CFEF39250338780089F92E /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CFEF38250338780089F92E /* loginView.swift */; };
 		72CFEF3B250345D20089F92E /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CFEF3A250345D20089F92E /* login.swift */; };
@@ -66,6 +67,7 @@
 		729F5CED2504B18F00C4A8BC /* MineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineView.swift; sourceTree = "<group>"; };
 		729F5CF12504B23D00C4A8BC /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
 		729F5CF32505FE1600C4A8BC /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
+		729F5CF525062DF800C4A8BC /* ClassContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassContentView.swift; sourceTree = "<group>"; };
 		72A9FF522504A2E40016E388 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		72CFEF38250338780089F92E /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
 		72CFEF3A250345D20089F92E /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				72CFEF3A250345D20089F92E /* login.swift */,
 				72CFEF38250338780089F92E /* loginView.swift */,
 				729F5CF12504B23D00C4A8BC /* ClassView.swift */,
+				729F5CF525062DF800C4A8BC /* ClassContentView.swift */,
 				72A9FF522504A2E40016E388 /* Extensions.swift */,
 				725C0C8A2503983B0010DBD1 /* test.swift */,
 				720580FA250335CD00ED54E1 /* Preview Content */,
@@ -316,6 +319,7 @@
 				720580F5250335CC00ED54E1 /* SceneDelegate.swift in Sources */,
 				7297341B2504827B00897BFB /* tableView.swift in Sources */,
 				72CFEF39250338780089F92E /* loginView.swift in Sources */,
+				729F5CF625062DF800C4A8BC /* ClassContentView.swift in Sources */,
 				720580F7250335CC00ED54E1 /* ContentView.swift in Sources */,
 				729F5CEE2504B18F00C4A8BC /* MineView.swift in Sources */,
 			);
