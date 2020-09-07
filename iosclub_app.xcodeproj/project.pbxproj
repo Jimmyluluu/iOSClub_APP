@@ -17,12 +17,12 @@
 		72058115250335CD00ED54E1 /* iosclub_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72058114250335CD00ED54E1 /* iosclub_appUITests.swift */; };
 		725C0C8B2503983B0010DBD1 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725C0C8A2503983B0010DBD1 /* test.swift */; };
 		7297341B2504827B00897BFB /* tableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7297341A2504827B00897BFB /* tableView.swift */; };
-		729F5CEE2504B18F00C4A8BC /* MineView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F5CED2504B18F00C4A8BC /* MineView1.swift */; };
-		729F5CF02504B1A800C4A8BC /* MineView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F5CEF2504B1A800C4A8BC /* MineView2.swift */; };
+		729F5CEE2504B18F00C4A8BC /* MineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F5CED2504B18F00C4A8BC /* MineView.swift */; };
 		729F5CF22504B23D00C4A8BC /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729F5CF12504B23D00C4A8BC /* ClassView.swift */; };
 		72A9FF532504A2E40016E388 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A9FF522504A2E40016E388 /* Extensions.swift */; };
 		72CFEF39250338780089F92E /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CFEF38250338780089F92E /* loginView.swift */; };
 		72CFEF3B250345D20089F92E /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CFEF3A250345D20089F92E /* login.swift */; };
+		E129A96E2505DBF600C8641F /* borderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129A96D2505DBF600C8641F /* borderView.swift */; };
 		E174F3142504AE3C00D8CDC2 /* TimeLineBranchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174F3132504AE3C00D8CDC2 /* TimeLineBranchView.swift */; };
 		E174F3162504AE6D00D8CDC2 /* ActivityLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174F3152504AE6D00D8CDC2 /* ActivityLineView.swift */; };
 		E174F3182504AEE100D8CDC2 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174F3172504AEE100D8CDC2 /* TimeLineView.swift */; };
@@ -62,12 +62,12 @@
 		72058116250335CD00ED54E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		725C0C8A2503983B0010DBD1 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		7297341A2504827B00897BFB /* tableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableView.swift; sourceTree = "<group>"; };
-		729F5CED2504B18F00C4A8BC /* MineView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineView1.swift; sourceTree = "<group>"; };
-		729F5CEF2504B1A800C4A8BC /* MineView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineView2.swift; sourceTree = "<group>"; };
+		729F5CED2504B18F00C4A8BC /* MineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineView.swift; sourceTree = "<group>"; };
 		729F5CF12504B23D00C4A8BC /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
 		72A9FF522504A2E40016E388 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		72CFEF38250338780089F92E /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
 		72CFEF3A250345D20089F92E /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		E129A96D2505DBF600C8641F /* borderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = borderView.swift; sourceTree = "<group>"; };
 		E174F3132504AE3C00D8CDC2 /* TimeLineBranchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineBranchView.swift; sourceTree = "<group>"; };
 		E174F3152504AE6D00D8CDC2 /* ActivityLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLineView.swift; sourceTree = "<group>"; };
 		E174F3172504AEE100D8CDC2 /* TimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
@@ -123,8 +123,8 @@
 			children = (
 				720580F6250335CC00ED54E1 /* ContentView.swift */,
 				7297341A2504827B00897BFB /* tableView.swift */,
-				729F5CED2504B18F00C4A8BC /* MineView1.swift */,
-				729F5CEF2504B1A800C4A8BC /* MineView2.swift */,
+				729F5CED2504B18F00C4A8BC /* MineView.swift */,
+				E129A96D2505DBF600C8641F /* borderView.swift */,
 				729F5CF12504B23D00C4A8BC /* ClassView.swift */,
 				72CFEF3A250345D20089F92E /* login.swift */,
 				72CFEF38250338780089F92E /* loginView.swift */,
@@ -308,12 +308,12 @@
 				72CFEF3B250345D20089F92E /* login.swift in Sources */,
 				72A9FF532504A2E40016E388 /* Extensions.swift in Sources */,
 				E174F3162504AE6D00D8CDC2 /* ActivityLineView.swift in Sources */,
+				E129A96E2505DBF600C8641F /* borderView.swift in Sources */,
 				720580F5250335CC00ED54E1 /* SceneDelegate.swift in Sources */,
 				7297341B2504827B00897BFB /* tableView.swift in Sources */,
-				729F5CF02504B1A800C4A8BC /* MineView2.swift in Sources */,
 				72CFEF39250338780089F92E /* loginView.swift in Sources */,
 				720580F7250335CC00ED54E1 /* ContentView.swift in Sources */,
-				729F5CEE2504B18F00C4A8BC /* MineView1.swift in Sources */,
+				729F5CEE2504B18F00C4A8BC /* MineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct MineView: View {
-    @State var is_manager:Bool = true
+    @State var is_manager:Bool = false
     var body: some View {
         ZStack{
             Color(hex:"0A0A0A")
@@ -45,6 +45,7 @@ struct MineView: View {
         }.edgesIgnoringSafeArea(.all)
     }
 }
+
 
 
 struct MineView_Previews: PreviewProvider {
