@@ -13,7 +13,21 @@ struct MineView1: View {
         ZStack{
             Color(hex:"0A0A0A")
             VStack(spacing:38){
-                Image("border")
+                borderView(name: "薛竣祐", is_manager: false, head: "card")
+//                ZStack{
+//                    Image("border")
+//                    HStack(spacing:20){
+//                        Image("card")
+//                        VStack{
+//                            Text("薛竣祐")
+//                                .foregroundColor(.white)
+//                                .font(.system(.title,design:.rounded))
+//                            Text("MANAGER")
+//                                .foregroundColor(.white)
+//                                .font(.system(.headline,design:.rounded))
+//                        }
+//                    }
+//                }
                 Button(action:{
                     print("123")
                 }){
