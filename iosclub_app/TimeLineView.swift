@@ -13,6 +13,8 @@ struct ActivityItem:Hashable {
     var is_school: Bool
     var date:String
 }
+var midlineLength = UIScreen.screenHeight*0.7//整個螢幕高度*0.7 中間那條線長度(37行)以及各選項間距(60行)
+
 struct TimeLineView:View {
     @State var leftData:[ActivityItem] = [
         ActivityItem(title: "中秋夜烤",important:true,is_school:false,date:"2"),
@@ -20,19 +22,24 @@ struct TimeLineView:View {
     ]
     @State var rightData:[ActivityItem] = [
         ActivityItem(title: "迎新茶會",important:false,is_school:true,date:"1"),
+        ActivityItem(title: "期末聚",important:true,is_school:true,date:"30"),
         ActivityItem(title: "期末聚",important:true,is_school:true,date:"30")
     ]
+    var itemSpace=0 //各項選項長度
+    init() {
+        itemSpace = leftData.count>rightData.count ? leftData.count+2:rightData.count+2 //初始化判斷左右兩邊哪一邊為最大item *警告必需要在接完後端之後
+    }
     var body:some View{
         ZStack{
             ActivityTitle(text: "活\n動", x_offset: 30)
             ActivityTitle(text: "社\n團", x_offset: -30)
             HStack{
-                ActivityItemListView(data: leftData)
+                ActivityItemListView(data: leftData,itemSpace:self.itemSpace)
                 Capsule()
                     .fill(Color(hex:"bd997b"))
-                    .frame(width: 10, height: UIScreen.screenHeight*0.7)
-
-                ActivityItemListView(data: rightData)
+                    .frame(width: 10, height: midlineLength)
+                    //中線
+                ActivityItemListView(data: rightData,itemSpace:self.itemSpace)
             }
         }
         .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
@@ -53,8 +60,9 @@ struct ActivityTitle:View {
 }
 struct ActivityItemListView:View {
     var data:[ActivityItem]
+    var itemSpace=0
     var body: some View{
-        VStack{
+        VStack(spacing:midlineLength/CGFloat(itemSpace/*把中線長度除與左邊或右邊最大item*/)){
             ForEach(data, id: \.self) { (item) in
                 ActivityItemView(title: item.title, important: item.important, is_school: item.is_school, date: item.date)
             }
