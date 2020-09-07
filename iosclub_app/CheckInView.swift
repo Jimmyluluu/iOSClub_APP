@@ -16,7 +16,7 @@ struct CheckInView: View {
             ZStack{
                 Image("CheckIn")
                 Image("CheckInline")
-            }
+            }.offset(x: 0,y:-25 )
         }
     }
 }
