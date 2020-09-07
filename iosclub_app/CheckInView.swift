@@ -28,7 +28,7 @@ struct CheckInView: View {
 
 //            }
             
-        }.navigationBarTitle("Try it!", displayMode: .inline)
+        }
         
     }
 }

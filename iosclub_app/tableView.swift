@@ -14,7 +14,7 @@ struct tableView: View {
     }
     var body: some View {
         TabView{
-            Text("g")
+            AboutClubView()
             .background(Color(hex:"0A0A0A"))
             .tabItem{
                 Image("about")
@@ -38,7 +38,7 @@ struct tableView: View {
                 Image("class")
                 Text("課程")
             }.tag(3)
-            Text("a11")
+            SettingView()
             .background(Color(hex:"0A0A0A"))
             .tabItem{
                 Image("setting")
