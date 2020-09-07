@@ -24,7 +24,7 @@ struct MineView: View {
                         }
                     }
                     
-                    NavigationLink(destination:CheckInView(name: "薛竣祐", is_manager: is_manager)){
+                    NavigationLink(destination:DayOffView()){
                         VStack{
                             Image("leave").renderingMode(.original)
                             Text("我要請假").foregroundColor(Color.white)

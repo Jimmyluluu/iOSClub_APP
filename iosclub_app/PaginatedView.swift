@@ -31,6 +31,7 @@ struct PaginatedView<Page: View & Identifiable>: View {
         .offset(x: self.totalOffset, y: 0)
         DotsComponent(pageIndex: self.currentPageIndex,
                       pageCount: self.pages.count)
+            .offset(y:-80)
       }
       .onAppear {
         self.totalOffset = proxy.size.width / 2 * (CGFloat(self.pages.count) - 1)
@@ -120,7 +121,7 @@ private struct DotsComponent: View {
             ForEach(0..<self.pageCount) { index in
                 Circle()
                 .frame(width: 10, height: 10)
-                .foregroundColor(index == self.pageIndex ? .black : .gray)
+                .foregroundColor(index == self.pageIndex ? .white : .gray)
             }
         }
     }
@@ -154,6 +155,6 @@ struct scrolltest_Previews: PreviewProvider {
                 Page(index: 4,name: "薛竣祐",is_manager: true),
                 Page(index: 5,name: "薛竣祐",is_manager: true)
             ], spacing: CGFloat(50)
-        )
+        ).background(Color.black).edgesIgnoringSafeArea(.all)
     }
 }
