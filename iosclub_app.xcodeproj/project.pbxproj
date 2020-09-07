@@ -30,6 +30,7 @@
 		76DE8A2D250641AD00CCBFC4 /* UrlHttpPostGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE8A2C250641AD00CCBFC4 /* UrlHttpPostGet.swift */; };
 		E129A96E2505DBF600C8641F /* borderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129A96D2505DBF600C8641F /* borderView.swift */; };
 		E129A9722506461600C8641F /* PaginatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129A9712506461600C8641F /* PaginatedView.swift */; };
+		E129A9782506928300C8641F /* DayOffView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129A9772506928300C8641F /* DayOffView.swift */; };
 		E174F3142504AE3C00D8CDC2 /* TimeLineBranchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174F3132504AE3C00D8CDC2 /* TimeLineBranchView.swift */; };
 		E174F3162504AE6D00D8CDC2 /* ActivityLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174F3152504AE6D00D8CDC2 /* ActivityLineView.swift */; };
 		E174F3182504AEE100D8CDC2 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174F3172504AEE100D8CDC2 /* TimeLineView.swift */; };
@@ -82,6 +83,7 @@
 		76DE8A2C250641AD00CCBFC4 /* UrlHttpPostGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlHttpPostGet.swift; sourceTree = "<group>"; };
 		E129A96D2505DBF600C8641F /* borderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = borderView.swift; sourceTree = "<group>"; };
 		E129A9712506461600C8641F /* PaginatedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginatedView.swift; sourceTree = "<group>"; };
+		E129A9772506928300C8641F /* DayOffView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOffView.swift; sourceTree = "<group>"; };
 		E174F3132504AE3C00D8CDC2 /* TimeLineBranchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineBranchView.swift; sourceTree = "<group>"; };
 		E174F3152504AE6D00D8CDC2 /* ActivityLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLineView.swift; sourceTree = "<group>"; };
 		E174F3172504AEE100D8CDC2 /* TimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				729F5CF32505FE1600C4A8BC /* CheckInView.swift */,
 				E129A9712506461600C8641F /* PaginatedView.swift */,
 				728CD24F2506482A0022C38D /* SettingView.swift */,
+				E129A9772506928300C8641F /* DayOffView.swift */,
 				E129A96D2505DBF600C8641F /* borderView.swift */,
 				729F5CED2504B18F00C4A8BC /* MineView.swift */,
 				729F5CF12504B23D00C4A8BC /* ClassView.swift */,
@@ -340,6 +343,7 @@
 				72A9FF532504A2E40016E388 /* Extensions.swift in Sources */,
 				76DE8A2D250641AD00CCBFC4 /* UrlHttpPostGet.swift in Sources */,
 				728CD2502506482A0022C38D /* SettingView.swift in Sources */,
+				E129A9782506928300C8641F /* DayOffView.swift in Sources */,
 				E174F3162504AE6D00D8CDC2 /* ActivityLineView.swift in Sources */,
 				E129A96E2505DBF600C8641F /* borderView.swift in Sources */,
 				720580F5250335CC00ED54E1 /* SceneDelegate.swift in Sources */,
