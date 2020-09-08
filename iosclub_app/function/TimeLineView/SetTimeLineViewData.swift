@@ -6,6 +6,11 @@
 //  Copyright © 2020 魯敬元. All rights reserved.
 //  TimeLineView 頁面資料讀取處理
 
+//  使用UrlHttpPostGet.swift 之中的 get函數
+//  get(UrlSubdirectory:String/*網址子目錄*/, Completion block: @escaping (NSDictionary) ->()/*閉包可以用來處理異步問題讓後面別人呼叫他的func在異步線程完成後執行新增的後續處理*/)
+
+//  使用TimeLineViewConstDateType.swift的資料型態
+
 import Foundation
 
 func getTheLeftRightData(cellback: ()->())  {//取得校內活動資料
