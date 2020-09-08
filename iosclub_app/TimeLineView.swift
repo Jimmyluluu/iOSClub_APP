@@ -55,7 +55,8 @@ struct TimeLineView:View {
         .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
         .background(Color(hex:"0A0A0A"))
         .onAppear{
-            
+//            getTheRightData((a){})
+            getTheRightData(cellback: {_ in return })
         }
     }
 }
