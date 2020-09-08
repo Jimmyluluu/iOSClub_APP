@@ -15,7 +15,7 @@ func get(UrlSubdirectory:String/*網址子目錄*/, Completion block: @escaping 
     let url = "http://140.134.79.128:9080"+UrlSubdirectory //網址加上子目錄
     let UrlRequest = URLRequest(url: URL(string: url)!)//新增url任務
     
-   
+
     let task = session.dataTask(with: UrlRequest) {(data, response, error) in
             do {
                 // 返回的是一个json，将返回的json转成字典r

@@ -8,9 +8,16 @@
 
 import Foundation
 
-//func getTheRightData(<#parameters#>) -> <#return type#> {//取得校內活動資料
-//    <#function body#>
-//}
+func getTheRightData(cellback: ([NSDictionary])->())  {//取得校內活動資料
+    var a = NSDictionary()
+                get(UrlSubdirectory: "/activity", Completion: {(json)in
+                    a=json
+                    var asd = a["activity_id"] as! [Int]
+//                    print(asd[2])
+                    })
+}
+
+
 
 //var a = NSDictionary()
 //            get(UrlSubdirectory: "/activity", Completion: {(json)in
