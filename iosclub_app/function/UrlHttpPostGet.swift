@@ -4,7 +4,7 @@
 //
 //  Created by 阿騰 on 2020/9/7.
 //  Copyright © 2020 魯敬元. All rights reserved.
-//
+//  網路協議get post 等等的http協議區
 
 import Foundation
 
