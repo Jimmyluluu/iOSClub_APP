@@ -32,12 +32,12 @@ struct DayOffView: View {
                     .frame(width:400, height:300)
 //                    .padding(.infinity)
                 VStack{
-                    Text("請假時間  \(selection[0]+selection[1]+selection[2])").font(.largeTitle).foregroundColor(.white)
+                    Text("請假時間  \(selection[0]+selection[1]+selection[2])").font(.title).foregroundColor(.white)
                     Button(action: {
                         print("123")
                     }){
                         Text("確認請假")
-                            .font(.title)
+                            .font(.headline)
                             .padding(10)
                             .foregroundColor(Color(.white))
                             .cornerRadius(60)
@@ -45,7 +45,7 @@ struct DayOffView: View {
                                 RoundedRectangle(cornerRadius: 60)
                                     .stroke(Color(hex:"bd997b"), lineWidth: 3)
                             )
-                    }.padding(.top,70)
+                    }.padding(.top,100)
                 }
            }
         }.edgesIgnoringSafeArea(.all)
@@ -72,7 +72,7 @@ struct MultiPicker: View  {
                         }
                     }
                     .pickerStyle(WheelPickerStyle())
-                    .frame(width: geometry.size.width / CGFloat(self.data.count), height: geometry.size.height)
+                    .frame(width: geometry.size.width*0.8 / CGFloat(self.data.count), height: geometry.size.height)
                     .clipped()
                 }
             }
