@@ -29,6 +29,7 @@
 		72CFEF3B250345D20089F92E /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CFEF3A250345D20089F92E /* login.swift */; };
 		76DE8A2D250641AD00CCBFC4 /* UrlHttpPostGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE8A2C250641AD00CCBFC4 /* UrlHttpPostGet.swift */; };
 		76DE8A2F2506B02100CCBFC4 /* SetTimeLineViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE8A2E2506B02100CCBFC4 /* SetTimeLineViewData.swift */; };
+		76DE8A332508253600CCBFC4 /* TimeLineViewConstDateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE8A322508253500CCBFC4 /* TimeLineViewConstDateType.swift */; };
 		E129A96E2505DBF600C8641F /* borderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129A96D2505DBF600C8641F /* borderView.swift */; };
 		E129A9722506461600C8641F /* PaginatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129A9712506461600C8641F /* PaginatedView.swift */; };
 		E129A9782506928300C8641F /* DayOffView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129A9772506928300C8641F /* DayOffView.swift */; };
@@ -83,6 +84,7 @@
 		72CFEF3A250345D20089F92E /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		76DE8A2C250641AD00CCBFC4 /* UrlHttpPostGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlHttpPostGet.swift; sourceTree = "<group>"; };
 		76DE8A2E2506B02100CCBFC4 /* SetTimeLineViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeLineViewData.swift; sourceTree = "<group>"; };
+		76DE8A322508253500CCBFC4 /* TimeLineViewConstDateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewConstDateType.swift; sourceTree = "<group>"; };
 		E129A96D2505DBF600C8641F /* borderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = borderView.swift; sourceTree = "<group>"; };
 		E129A9712506461600C8641F /* PaginatedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginatedView.swift; sourceTree = "<group>"; };
 		E129A9772506928300C8641F /* DayOffView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOffView.swift; sourceTree = "<group>"; };
@@ -208,8 +210,17 @@
 			isa = PBXGroup;
 			children = (
 				76DE8A2E2506B02100CCBFC4 /* SetTimeLineViewData.swift */,
+				76DE8A312508250800CCBFC4 /* Constant */,
 			);
 			path = TimeLineView;
+			sourceTree = "<group>";
+		};
+		76DE8A312508250800CCBFC4 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				76DE8A322508253500CCBFC4 /* TimeLineViewConstDateType.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +365,7 @@
 				72CFEF3B250345D20089F92E /* login.swift in Sources */,
 				72A9FF532504A2E40016E388 /* Extensions.swift in Sources */,
 				76DE8A2D250641AD00CCBFC4 /* UrlHttpPostGet.swift in Sources */,
+				76DE8A332508253600CCBFC4 /* TimeLineViewConstDateType.swift in Sources */,
 				728CD2502506482A0022C38D /* SettingView.swift in Sources */,
 				E129A9782506928300C8641F /* DayOffView.swift in Sources */,
 				E174F3162504AE6D00D8CDC2 /* ActivityLineView.swift in Sources */,

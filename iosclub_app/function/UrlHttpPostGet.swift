@@ -22,8 +22,9 @@ func get(UrlSubdirectory:String/*網址子目錄*/, Completion block: @escaping 
                 if var r = try JSONSerialization.jsonObject(with: data!, options: []) as? NSDictionary//注意 異步需搭配try在呼叫閉包closure 要不然會因為可以丟nil而持續執行
                 {
                     block(r) //使用閉包closure 在swift裡處理異步問題等待完成時用他 他會在完成時執行
+                }else{print("无法连接到服务器")
+                    return
                 }
-                
             } catch {
                 // 失敗
                 print(String(data: data!, encoding: .utf8)!)
