@@ -21,8 +21,9 @@ func getTheLeftRightData(cellback: ()->())  {//取得校內活動資料
         var is_school = json["is_school"] as! [Bool]
         var title = json["title"] as! [String]
         
-        var TimeLineViewData:[TimeLineViewDataType] = []
-        for i in 0...id.count-1 {
+        var TimeLineViewData:[TimeLineViewDataType] = [] //建立一個TimeLineViewConstDateType.swift的資料型態陣列
+        for i in 0...id.count-1 {//透過id觀察幾筆資料
+            // 分析日期
             var year = 0
             var month = ""
             var day = 0
@@ -32,10 +33,13 @@ func getTheLeftRightData(cellback: ()->())  {//取得校內活動資料
                 month=String(date[i].split(separator: " ")[2])
                 day=Int(date[i].split(separator: " ")[1])!
             }
-            
+            // 上面都在分析日期
             var singTimeLineViewData:TimeLineViewDataType = TimeLineViewDataType(id: id[i], date_year:year, date_month: month, date_day: day, is_important: is_important[i], is_school: is_school[i], title: title[i])
+            //新增TimeLineViewDataType資料
             TimeLineViewData.append(singTimeLineViewData)
+            //放入陣列
         }
         TimeLineViewData.sort(by: {(a,b)in return b.date_day>a.date_day})
+        //排序TimeLineViewData陣列 透過日期(a,b)代表排序比較的兩個資料 後面回傳Bool
     })
 }
