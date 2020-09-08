@@ -30,3 +30,9 @@ func getTheLeftRightData(cellback: ()->())  {//取得校內活動資料
 
 
 
+//var a = NSDictionary()
+//            get(UrlSubdirectory: "/activity", Completion: {(json)in
+////                print(json)
+//                a=json
+//                print(a["res"])
+//                })
