@@ -34,6 +34,7 @@ struct TimeLineView:View {
     var itemSpace:Int=0 //各項選項長度
     init() {
         itemSpace = leftData.count>rightData.count ? leftData.count+2:rightData.count+2 //初始化判斷左右兩邊哪一邊為最大item *警告必需要在接完後端之後
+        
     }
     var body:some View{
         ZStack{
@@ -53,7 +54,9 @@ struct TimeLineView:View {
         }
         .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
         .background(Color(hex:"0A0A0A"))
-        
+        .onAppear{
+            
+        }
     }
 }
 struct ActivityTitle:View {
@@ -101,6 +104,7 @@ struct ActivityItemView:View {
                 }
             }
         }.padding(is_school ? .trailing : .leading)
+            
     }
 }
 
