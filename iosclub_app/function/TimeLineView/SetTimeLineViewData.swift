@@ -14,29 +14,28 @@
 import Foundation
 
 func getTheLeftRightData(cellback: ()->())  {//取得校內活動資料
-                get(UrlSubdirectory: "/activity", Completion: {(json)in
-                    var id = json["activity_id"] as! [Int] //獨立編號
-                    var date = json["date"]  as! [String] //未處理日期
-                    var is_important = json["is_important"] as! [Bool]
-                    var is_school = json["is_school"] as! [Bool]
-                    var title = json["title"] as! [String]
-                    
-                    
-                    for i in date
-                    {
-                        var date_split = i.split(separator: " ") //日期字串切割
-                        var date_year = date_split[3]
-                        print(<#T##items: Any...##Any#>)
-                    }
-                    print(date)
-                    })
+    get(UrlSubdirectory: "/activity", Completion: {(json)in
+        var id = json["activity_id"] as! [Int] //獨立編號
+        var date = json["date"]  as! [String] //未處理日期
+        var is_important = json["is_important"] as! [Bool]
+        var is_school = json["is_school"] as! [Bool]
+        var title = json["title"] as! [String]
+        
+        var TimeLineViewData:[TimeLineViewDataType] = []
+        for i in 0...id.count-1 {
+            var year = 0
+            var month = ""
+            var day = 0
+            if date[i] != ""
+            {
+                year=Int(date[i].split(separator: " ")[3])!
+                month=String(date[i].split(separator: " ")[2])
+                day=Int(date[i].split(separator: " ")[1])!
+            }
+            
+            var singTimeLineViewData:TimeLineViewDataType = TimeLineViewDataType(id: id[i], date_year:year, date_month: month, date_day: day, is_important: is_important[i], is_school: is_school[i], title: title[i])
+            TimeLineViewData.append(singTimeLineViewData)
+        }
+        TimeLineViewData.sort(by: {(a,b)in return b.date_day>a.date_day})
+    })
 }
-
-
-
-//var a = NSDictionary()
-//            get(UrlSubdirectory: "/activity", Completion: {(json)in
-////                print(json)
-//                a=json
-//                print(a["res"])
-//                })
