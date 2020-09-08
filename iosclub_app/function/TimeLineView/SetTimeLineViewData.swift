@@ -12,9 +12,9 @@ import Foundation
 //    <#function body#>
 //}
 
-var a = NSDictionary()
-            get(UrlSubdirectory: "/activity", Completion: {(json)in
-//                print(json)
-                a=json
-                print(a["res"])
-                })
+//var a = NSDictionary()
+//            get(UrlSubdirectory: "/activity", Completion: {(json)in
+////                print(json)
+//                a=json
+//                print(a["res"])
+//                })
