@@ -27,11 +27,12 @@ func getTheLeftRightData(cellback: ()->())  {//取得校內活動資料
             var year = 0
             var month = ""
             var day = 0
+            var date_split = date[i].split(separator: " ")//切割日期字串 ex: "Thu, 10 Sep 2020 00:00:00 GMT"
             if date[i] != ""
             {
-                year=Int(date[i].split(separator: " ")[3])!
-                month=String(date[i].split(separator: " ")[2])
-                day=Int(date[i].split(separator: " ")[1])!
+                year=Int(date_split[3])!
+                month=String(date_split[2])
+                day=Int(date_split[1])!
             }
             // 上面都在分析日期
             var singTimeLineViewData:TimeLineViewDataType = TimeLineViewDataType(id: id[i], date_year:year, date_month: month, date_day: day, is_important: is_important[i], is_school: is_school[i], title: title[i])
