@@ -11,12 +11,11 @@ import SwiftUI
 struct AboutClubView: View {
     @State private var page = 0
     private let items: [String] = ["社團介紹", "幹部介紹", "社團活動"]
-//    init() {
-//        UISegmentedControl.appearance().selectedSegmentTintColor = Color(hex:"0A0A0A").toUIColor()
-//        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-//        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.gray], for: .normal)
-//
-//    }
+    private let content:[String] = [
+        "一個在課堂之外\n促進學習和實踐的\n iOS 開發者社團",
+        "WWDC20 Winner\n全台唯二",
+        "什麼都有"
+    ]
     var body: some View {
         ZStack{
             Color(hex:"0A0A0A").edgesIgnoringSafeArea(.all)
@@ -47,7 +46,11 @@ struct AboutClubView: View {
                         .fill(Color(hex: "FFDEC4"))
                         .padding(.vertical,50)
                         .padding(.horizontal,40)
-
+                    
+                    Text(content[page])
+                        .font(.system(.title,design:.rounded))
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth:300)
                     Image("iosclub_head")
                         .resizable()
                         .frame(width: 100.68, height: 127.12)
@@ -56,19 +59,6 @@ struct AboutClubView: View {
                     
                     
                 }
-//                if page == 1{
-//                    Text("\(page)").foregroundColor(.white)
-//                }
-//                Text("\(page)").foregroundColor(.white)
-//                Picker(selection: $page, label: Text("")) {
-//                    Text("社團介紹").tag(0)
-//                    Text("幹部介紹").tag(1)
-//                    Text("社團活動").tag(2)
-//                }.pickerStyle(SegmentedPickerStyle())
-//                    .background(Color(hex:"0A0A0A"))
-//                if page == 0{
-//                    Text("Value: \(page)")
-//                }
                 
             }
         }

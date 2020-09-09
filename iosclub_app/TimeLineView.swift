@@ -19,8 +19,7 @@ struct TimeLineView:View {
     func reView_itemSpace()  {
         itemSpace = leftData.count>rightData.count ? leftData.count+2:rightData.count+2 //初始化判斷左右兩邊哪一邊為最大item *警告必需要在接完後端之後
     }
-    @State var leftData:[ActivityItem] = [
-    ]
+    @State var leftData:[ActivityItem] = []
     @State var rightData:[ActivityItem] = []
     
     var body:some View{
@@ -81,7 +80,13 @@ struct ActivityItemListView:View {
         VStack(spacing:(midlineLength-CGFloat(itemSpace*65*itemSpace/10))/CGFloat(itemSpace/*把中線長度除與左邊或右邊最大item*/)){
             ActivityItemView(title: "", important: false, is_school: false, date: "").hidden()
             ForEach(data, id: \.self) { (item) in
-                ActivityItemView(title: item.title, important: item.important, is_school: item.is_school, date: item.date)
+                VStack{
+                    if item.title == ""{
+                        ActivityItemView(title: item.title, important: item.important, is_school: item.is_school, date: item.date).hidden()
+                    }else{
+                        ActivityItemView(title: item.title, important: item.important, is_school: item.is_school, date: item.date)
+                    }
+                }
             }
         }
     }
