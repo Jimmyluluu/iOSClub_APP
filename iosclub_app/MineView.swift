@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct MineView: View {
-    var is_manager:Bool = true
+    var is_manager:Bool = false
     var body: some View {
         NavigationView{
             ZStack{
@@ -41,7 +41,7 @@ struct MineView: View {
                             }
                         }
                     }
-                }.offset(x :0,y: is_manager ? -40 : -90)
+                }.offset(x :0,y: is_manager ? -10 : -50)
             }.edgesIgnoringSafeArea(.all)
         }
     }

@@ -31,7 +31,7 @@ struct PaginatedView<Page: View & Identifiable>: View {
         .offset(x: self.totalOffset, y: 0)
         DotsComponent(pageIndex: self.currentPageIndex,
                       pageCount: self.pages.count)
-            .offset(y:-80)
+            .offset(y:-50)
       }
       .onAppear {
         self.totalOffset = proxy.size.width / 2 * (CGFloat(self.pages.count) - 1)
