@@ -38,7 +38,7 @@ struct TimeLineView:View {
     }
     var body:some View{
         ZStack{
-            ActivityTitle(text: "活\n動", x_offset: 30)
+            ActivityTitle(text: "校\n外", x_offset: 30)
             ActivityTitle(text: "社\n團", x_offset: -30)
             HStack{
                 ActivityItemListView(data: leftData,itemSpace:self.itemSpace)
