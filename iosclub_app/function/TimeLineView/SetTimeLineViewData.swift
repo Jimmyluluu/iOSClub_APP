@@ -26,7 +26,7 @@ func getTheLeftRightData(completion cellback: @escaping ([TimeLineViewDataType])
             // 分析日期
             var year = 0
             var month = ""
-            var day = 0
+            var day = 100
             var date_split = date[i].split(separator: " ")//切割日期字串 ex: "Thu, 10 Sep 2020 00:00:00 GMT"
             if date[i] != ""
             {
