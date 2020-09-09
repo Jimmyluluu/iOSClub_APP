@@ -9,42 +9,64 @@
 import SwiftUI
 
 struct tableView: View {
+    @State var tabViewPage:Int = 0
     init() {
         UITabBar.appearance().barTintColor = Color(hex: "0A0A0A").toUIColor()
     }
     var body: some View {
-        TabView{
+        TabView(selection:$tabViewPage){
             AboutClubView()
             .background(Color(hex:"0A0A0A"))
-            .tabItem{
+            .tabItem({
                 Image("about")
                 Text("關於社團")
-            }.tag(0)
+            })
+            .tag(0)
+            .onAppear(){
+                self.tabViewPage = 0
+            }
             TimeLineView()
                 .background(Color(hex:"0A0A0A"))
-                .tabItem{
+                .tabItem({
                     Image("activity")
                     Text("活動")
-                }.tag(1)
+                })
+                .tag(1)
+                .onAppear(){
+                    self.tabViewPage = 1
+                }
             MineView()
                 .background(Color(hex:"0A0A0A"))
-                .tabItem{
+                .tabItem({
                     Image("mind")
                     Text("個人")
-                }.tag(2)
+                })
+                .tag(2)
+                .onAppear(){
+                    self.tabViewPage = 2
+                }
             ClassView()
-            .background(Color(hex:"0A0A0A"))
-            .tabItem{
-                Image("class")
-                Text("課程")
-            }.tag(3)
+                .background(Color(hex:"0A0A0A"))
+                .tabItem({
+                    Image("class")
+                    Text("課程")
+                })
+                .tag(3)
+                .onAppear(){
+                    self.tabViewPage = 3
+                }
             SettingView()
-            .background(Color(hex:"0A0A0A"))
-            .tabItem{
-                Image("setting")
-                Text("帳號設定")
-            }.tag(4)
+                .background(Color(hex:"0A0A0A"))
+                .tabItem({
+                    Image("setting")
+                    Text("帳號設定")
+                })
+                .tag(4)
+                .onAppear(){
+                    self.tabViewPage = 4
+                }
         }
+//        .edgesIgnoringSafeArea(.top)
     }
 }
 
