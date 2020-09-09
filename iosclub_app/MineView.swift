@@ -43,8 +43,8 @@ struct MineView: View {
                     }
                 }.offset(x :0,y: is_manager ? -10 : -50)
             }
-                .navigationBarTitle("")
-                .navigationBarHidden(true)
+//                .navigationBarTitle("")
+//                .navigationBarHidden(true)
 //            .background(Color(hex:"0A0A0A"))
             .edgesIgnoringSafeArea(.all)
         }
