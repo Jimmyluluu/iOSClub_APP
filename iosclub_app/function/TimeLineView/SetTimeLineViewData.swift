@@ -13,7 +13,7 @@
 
 import Foundation
 
-func getTheLeftRightData(cellback: ()->())  {//取得校內活動資料
+func getTheLeftRightData(completion cellback: @escaping ([TimeLineViewDataType])->())  {//取得校內活動資料
     get(UrlSubdirectory: "/activity", Completion: {(json)in
         var id = json["activity_id"] as! [Int] //獨立編號
         var date = json["date"]  as! [String] //未處理日期
@@ -40,7 +40,8 @@ func getTheLeftRightData(cellback: ()->())  {//取得校內活動資料
             TimeLineViewData.append(singTimeLineViewData)
             //放入陣列
         }
-        TimeLineViewData.sort(by: {(a,b)in return b.date_day>a.date_day})
-        //排序TimeLineViewData陣列 透過日期(a,b)代表排序比較的兩個資料 後面回傳Bool
+        TimeLineViewData.sort(by: {(a,b)in return b.date_day>a.date_day})//依照日期的完整檔案
+        //排序TimeLineViewData陣列 透過日期(a,b)代表排序比較的兩個資料 後面回傳Bool來決定
+        cellback(TimeLineViewData)
     })
 }

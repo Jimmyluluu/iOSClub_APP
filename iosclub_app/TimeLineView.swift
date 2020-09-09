@@ -14,48 +14,51 @@ struct ActivityItem:Hashable {
     var date:String
 }
 var midlineLength = UIScreen.screenHeight*0.8//整個螢幕高度*0.8 中間那條線長度(37行)以及各選項間距(60行)
-
+var itemSpace=0 //活動樹葉的空間
 struct TimeLineView:View {
-    @State var leftData:[ActivityItem] = [
-        ActivityItem(title: "中秋夜烤",important:true,is_school:false,date:"2"),
-        ActivityItem(title: "中秋夜烤",important:true,is_school:false,date:"2"),
-        ActivityItem(title: "社員大會",important:true,is_school:false,date:"15")
-    ]
-    @State var rightData:[ActivityItem] = [
-        ActivityItem(title: "迎新茶會",important:false,is_school:true,date:"1"),
-        ActivityItem(title: "期末聚",important:true,is_school:true,date:"30"),
-        ActivityItem(title: "期末聚",important:true,is_school:true,date:"30"),
-        ActivityItem(title: "期末聚",important:true,is_school:true,date:"30"),
-        ActivityItem(title: "期末聚",important:true,is_school:true,date:"30"),
-        ActivityItem(title: "期末聚",important:true,is_school:true,date:"30"),
-        ActivityItem(title: "期末聚",important:true,is_school:true,date:"30"),
-        ActivityItem(title: "期末聚",important:true,is_school:true,date:"30")
-    ]
-    var itemSpace:Int=0 //各項選項長度
-    init() {
+    func reView_itemSpace()  {
         itemSpace = leftData.count>rightData.count ? leftData.count+2:rightData.count+2 //初始化判斷左右兩邊哪一邊為最大item *警告必需要在接完後端之後
-        
     }
+    @State var leftData:[ActivityItem] = [
+    ]
+    @State var rightData:[ActivityItem] = []
+    
     var body:some View{
         ZStack{
             ActivityTitle(text: "活\n動", x_offset: 30)
             ActivityTitle(text: "社\n團", x_offset: -30)
             HStack{
-                ActivityItemListView(data: leftData,itemSpace:self.itemSpace)
+                ActivityItemListView(data: leftData,itemSpace:itemSpace)
                     .offset(y:CGFloat(-50*(10-itemSpace)/10))
                 Capsule()
                     .fill(Color(hex:"bd997b"))
                     .frame(width: 10, height: midlineLength)
-                    
-                    //中線
-                ActivityItemListView(data: rightData,itemSpace:self.itemSpace)
+                
+                //中線
+                ActivityItemListView(data: rightData,itemSpace:itemSpace)
                     .offset(y:CGFloat(-50*(10-itemSpace)/10))
             }.offset(y:20)
         }
         .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
         .background(Color(hex:"0A0A0A"))
         .onAppear{
-            getTheLeftRightData(cellback: {})
+            getTheLeftRightData(completion: {(data) in
+                self.rightData = []
+                self.leftData = [] //歸0
+                for i in data//把陣列分析
+                {
+                    if i.is_school //看校內校外
+                    {
+                        self.rightData.append(ActivityItem(title: i.title,important:i.is_important,is_school:i.is_school,date:String(i.date_day)))
+                    }
+                    else
+                    {
+                        self.leftData.append(ActivityItem(title: i.title,important:i.is_important,is_school:i.is_school,date:String(i.date_day)))
+                    }
+                }
+                self.reView_itemSpace()//呼叫更新間距
+                
+            })
         }
     }
 }
@@ -64,17 +67,17 @@ struct ActivityTitle:View {
     var x_offset:CGFloat
     var body: some View{
         Text(text)
-        .fontWeight(.bold)
-        .font(.system(.largeTitle,design:.rounded))
-        .foregroundColor(Color(.white))
-        .offset(x:x_offset,y:-UIScreen.screenHeight/2*0.75)
+            .fontWeight(.bold)
+            .font(.system(.largeTitle,design:.rounded))
+            .foregroundColor(Color(.white))
+            .offset(x:x_offset,y:-UIScreen.screenHeight/2*0.75)
     }
 }
 struct ActivityItemListView:View {
     var data:[ActivityItem]
     var itemSpace:Int=0
+    var is_hidden : Bool = false
     var body: some View{
-        
         VStack(spacing:(midlineLength-CGFloat(itemSpace*65*itemSpace/10))/CGFloat(itemSpace/*把中線長度除與左邊或右邊最大item*/)){
             ActivityItemView(title: "", important: false, is_school: false, date: "").hidden()
             ForEach(data, id: \.self) { (item) in
@@ -104,7 +107,6 @@ struct ActivityItemView:View {
                 }
             }
         }.padding(is_school ? .trailing : .leading)
-            
     }
 }
 
