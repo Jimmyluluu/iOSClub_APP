@@ -90,6 +90,7 @@ struct Page: View, Identifiable {
     var body: some View {
         ZStack{
             Image("CheckIn")
+                .fixedSize(horizontal: false, vertical: true)
             VStack{
                 HStack{
                     Image("card")

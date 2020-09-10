@@ -56,7 +56,8 @@ struct AboutClubView: View {
                         .resizable()
                         .frame(width: 100.68, height: 127.12)
                         .offset(x:UIScreen.screenWidth/2.7,y:UIScreen.screenHeight/3.6)
-                        .padding(.bottom,30)
+                        .padding(.bottom,60)
+                        .offset(y:-10)
                     
                     
                 }

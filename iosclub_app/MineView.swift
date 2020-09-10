@@ -45,7 +45,11 @@ struct MineView: View {
                         }
                     }
                 }.offset(x :0,y: is_manager ? -10 : -50)
-            }.edgesIgnoringSafeArea(.all)
+            }
+//                .navigationBarTitle("")
+//                .navigationBarHidden(true)
+//            .background(Color(hex:"0A0A0A"))
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }
@@ -54,6 +58,6 @@ struct MineView: View {
 
 struct MineView_Previews: PreviewProvider {
     static var previews: some View {
-        MineView()
+        MineView().previewLayout(.sizeThatFits)
     }
 }
