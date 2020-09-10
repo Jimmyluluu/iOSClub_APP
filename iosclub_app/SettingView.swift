@@ -26,7 +26,7 @@ struct SettingView: View {
         //                    .offset(x: 5,y :-120)
                         Image("line_s")
         //                    .offset(x :0,y: -100)
-                        Text("性別 ：男").foregroundColor(.white).font(.system(.body,design:.rounded))
+                        Text("性別 ：女").foregroundColor(.white).font(.system(.body,design:.rounded))
         //                    .offset(x: 5,y :-90)
                         Image("line_s")
         //                    .offset(x :0,y: -80)

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct MineView: View {
-    var is_manager:Bool = false
+    var is_manager:Bool = true
     var body: some View {
         NavigationView{
             ZStack{
@@ -34,7 +34,10 @@ struct MineView: View {
                         }
                     }
                     if is_manager{
-                        NavigationLink(destination: Text("123")){
+                        NavigationLink(destination:
+                        Image("lock")
+                        .background(Color(hex:"0A0A0A"))
+                            .edgesIgnoringSafeArea(.all)){
                             VStack{
                                 Image("manage").renderingMode(.original)
                                 Text("社團管理").foregroundColor(Color.white)
