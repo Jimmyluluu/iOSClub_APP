@@ -12,7 +12,7 @@ import Foundation
 
 func get(UrlSubdirectory:String/*網址子目錄*/, Completion block: @escaping (NSDictionary) ->())/*閉包可以用來處理異步問題讓後面別人呼叫他的func在異步線程完成後執行新增的後續處理*/{
     let session = URLSession(configuration: .default)//建立會議
-    let url = "http://140.134.79.128:9080"+UrlSubdirectory //網址加上子目錄
+    let url = "http://127.0.0.1"+UrlSubdirectory //網址加上子目錄
     let UrlRequest = URLRequest(url: URL(string: url)!)//新增url任務
     
 
